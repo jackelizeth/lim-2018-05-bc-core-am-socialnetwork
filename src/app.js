@@ -57,6 +57,11 @@ btnLogout.addEventListener('click',()=>{
 /* si te logueas con google obtienes toda la data  */
 btnGoogle.addEventListener('click',()=>{
     var provider = new firebase.auth.GoogleAuthProvider();
+    // var provider.setCustomParameters({
+    //     'display': 'popup'
+    // });
+
+
     firebase.auth().signInWithPopup(provider).then(function(result) {
         console.log('sesion con Google');
         
