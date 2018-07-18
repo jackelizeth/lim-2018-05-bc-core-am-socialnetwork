@@ -13,11 +13,11 @@ window.onload=()=>{
              /* si el usuario esta logiado */
             login.classList.remove("hiden");
             logout.classList.add("hiden");
-            console.log('inicio logueado')
+            console.log('inicio logueado');
         } else {
+            console.log('no esta logueado');
             login.classList.add("hiden");
             logout.classList.remove("hiden");
-            console.log('no esta logueado')
         }
       });
 }
@@ -25,7 +25,7 @@ window.onload=()=>{
 registre.addEventListener('click',()=>{
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
     .then(function(){
-        console.log('se agreo el usuario')
+        console.log('se creo el usuario')
     })
     .catch(function(error) {
         console.log(error.code, error.message)
@@ -59,15 +59,15 @@ btnGoogle.addEventListener('click',()=>{
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function(result) {
         console.log('sesion con Google');
+        
       }).catch(function(error) {
        
         console.log(error.code);
         console.log(error.message);
         console.log(error.email);
         console.log(error.credential);
-  
+  //....
       });
 })
-
 
     
