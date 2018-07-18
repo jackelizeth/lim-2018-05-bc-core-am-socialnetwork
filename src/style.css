@@ -1,0 +1,32 @@
+body{
+    font-size: 30px;
+    background-size: 100%;
+    color: #242423;    
+    text-align: center;
+    background-attachment: fixed;
+    
+  }
+
+  form{
+    padding: 1em;
+    background: white;
+    border: 1px solid #c1c1c1;
+    margin-top: 8rem;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    -webkit-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
+    -moz-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
+    box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
+
+    }
+
+    /*      */
+    .hiden {
+        display: none;
+      }
+      
+    .show {
+        display: block;
+    }
