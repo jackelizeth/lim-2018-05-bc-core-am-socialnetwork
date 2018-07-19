@@ -1,5 +1,5 @@
 const btnLogout = document.getElementById('btnLogout');
-const btnSignin = document.getElementById('btnSignin');
+const btnLogin = document.getElementById('btnLogin');
 const registre = document.getElementById('registre');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
@@ -43,7 +43,7 @@ registre.addEventListener('click',()=>{
     });  
 });
 
-btnSignin.addEventListener('click',()=>{
+btnLogin.addEventListener('click',()=>{
     firebase.auth().signInWithEmailAndPassword(email.value, password.value)
     .then(function(){
         console.log('inicia sesion')

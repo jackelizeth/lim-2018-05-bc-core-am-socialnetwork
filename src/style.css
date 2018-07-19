@@ -12,7 +12,8 @@ body{
     background: white;
     border: 1px solid #c1c1c1;
     margin-top: 8rem;
-    max-width: 350px;
+    height: 400px;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
