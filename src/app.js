@@ -5,15 +5,23 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const logout = document.getElementById('logout');
 const btnGoogle = document.getElementById('btnGoogle');
+const btnFacebook = document.getElementById('btnFacebook');
+
+const state = {
+    name: null,
+};
 
  /* crear email y password */
 window.onload=()=>{
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
              /* si el usuario esta logiado */
+            console.log('inicio logueado');
             login.classList.remove("hiden");
             logout.classList.add("hiden");
-            console.log('inicio logueado');
+            console.log(user);
+            userName.innerHTML = `Bienvenida ${user.displayName}`;
+            // userName.innerHTML = `Bienvenida ${state.name}`;
         } else {
             console.log('no esta logueado');
             login.classList.add("hiden");
@@ -25,6 +33,7 @@ window.onload=()=>{
 registre.addEventListener('click',()=>{
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
     .then(function(){
+        // state.name = name.value;
         console.log('se creo el usuario')
     })
     .catch(function(error) {
@@ -69,8 +78,24 @@ btnGoogle.addEventListener('click',()=>{
         console.log(error.message);
         console.log(error.email);
         console.log(error.credential);
-  
       });
 })
 
+
+btnFacebook.addEventListener('click',()=>{
+    var provider = new firebase.auth.GoogleAuthProvider();
+    provider.setCustomParameters({
+        'display': 'popup'
+    });
+
+    firebase.auth().signInWithPopup(provider)
+    .then(function(result) {
+        console.log('sesion con Facebook');})
+    .catch(function(error) {
+        console.log(error.code);
+        console.log(error.message);
+        console.log(error.email);
+        console.log(error.credential);
+      });
+})
     
