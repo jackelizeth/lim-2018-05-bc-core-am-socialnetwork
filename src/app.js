@@ -57,21 +57,19 @@ btnLogout.addEventListener('click',()=>{
 /* si te logueas con google obtienes toda la data  */
 btnGoogle.addEventListener('click',()=>{
     var provider = new firebase.auth.GoogleAuthProvider();
-    // var provider.setCustomParameters({
-    //     'display': 'popup'
-    // });
+    provider.setCustomParameters({
+        'display': 'popup'
+    });
 
-
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-        console.log('sesion con Google');
-        
-      }).catch(function(error) {
-       
+    firebase.auth().signInWithPopup(provider)
+    .then(function(result) {
+        console.log('sesion con Google');})
+    .catch(function(error) {
         console.log(error.code);
         console.log(error.message);
         console.log(error.email);
         console.log(error.credential);
-  //....
+  
       });
 })
 
