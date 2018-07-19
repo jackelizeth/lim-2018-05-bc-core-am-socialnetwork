@@ -81,7 +81,6 @@ btnGoogle.addEventListener('click',()=>{
       });
 })
 
-
 btnFacebook.addEventListener('click',()=>{
     var provider = new firebase.auth.GoogleAuthProvider();
     provider.setCustomParameters({
