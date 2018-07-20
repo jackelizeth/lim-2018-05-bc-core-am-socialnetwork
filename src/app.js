@@ -6,6 +6,10 @@ const password = document.getElementById('password');
 const logout = document.getElementById('logout');
 const btnGoogle = document.getElementById('btnGoogle');
 const btnFacebook = document.getElementById('btnFacebook');
+const baseDatos = document.getElementById('baseDatos');
+const btnSave = document.getElementById('btnSave');
+const texAreaPost = document.getElementById('texAreaPost');
+const miPosts = document.getElementById('miPosts');
 
 const state = {
     name: null,
@@ -17,8 +21,11 @@ window.onload=()=>{
         if (user) {
              /* si el usuario esta logiado */
             console.log('inicio logueado');
+
             login.classList.remove("hiden");
             logout.classList.add("hiden");
+            // baseDatos.classList.remove("hiden");
+            // miPosts.classList.remove("hiden");
             console.log(user);
             userName.innerHTML = `Bienvenida ${user.displayName}`;
             // userName.innerHTML = `Bienvenida ${state.name}`;
@@ -26,6 +33,8 @@ window.onload=()=>{
             console.log('no esta logueado');
             login.classList.add("hiden");
             logout.classList.remove("hiden");
+            // baseDatos.classList.add("hiden");
+            // miPosts.classList.add("hiden");
         }
       });
 }
@@ -72,7 +81,10 @@ btnGoogle.addEventListener('click',()=>{
 
     firebase.auth().signInWithPopup(provider)
     .then(function(result) {
-        console.log('sesion con Google');})
+        console.log('sesion con Google');
+        let user = result.user;
+        // writeUserData(user.uid, user.displayName,user.email, user.photoURL)
+    })
     .catch(function(error) {
         console.log(error.code);
         console.log(error.message);
@@ -97,3 +109,12 @@ btnFacebook.addEventListener('click',()=>{
         console.log(error.credential);
       });
 })
+
+function writeUserData(userId, name, email, imageUrl){
+    firebase.database().ref('users/' + userId).set({
+        username: name,
+        email: email,
+        prolife_picture: imageUrl,
+        github:  name,
+    });
+}
