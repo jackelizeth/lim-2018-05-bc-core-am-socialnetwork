@@ -1,15 +1,15 @@
 const btnLogout = document.getElementById('btnLogout');
 const btnLogin = document.getElementById('btnLogin');
-const btnRegister = document.getElementById('btnRegister');
+const registre = document.getElementById('registre');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const logout = document.getElementById('logout');
 const btnGoogle = document.getElementById('btnGoogle');
 const btnFacebook = document.getElementById('btnFacebook');
-const baseDatos = document.getElementById('baseDatos');
-const btnSave = document.getElementById('btnSave');
-const texAreaPost = document.getElementById('texAreaPost');
-const miPosts = document.getElementById('miPosts');
+// const baseDatos = document.getElementById('baseDatos');
+// const btnSave = document.getElementById('btnSave');
+// const texAreaPost = document.getElementById('texAreaPost');
+// const miPosts = document.getElementById('miPosts');
 
 const state = {
     name: null,
@@ -39,7 +39,7 @@ window.onload=()=>{
       });
 }
 
-btnRegister.addEventListener('click',()=>{
+registre.addEventListener('click',()=>{
     firebase.auth().signInWithEmailAndPassword(email.value, password.value)
     .then(function(){
         console.log('se creo el usuario')
@@ -110,11 +110,11 @@ btnFacebook.addEventListener('click',()=>{
       });
 })
 
-function writeUserData(userId, name, email, imageUrl){
-    firebase.database().ref('users/' + userId).set({
-        username: name,
-        email: email,
-        prolife_picture: imageUrl,
-        github:  name,
-    });
-}
+// function writeUserData(userId, name, email, imageUrl){
+//     firebase.database().ref('users/' + userId).set({
+//         username: name,
+//         email: email,
+//         prolife_picture: imageUrl,
+//         github:  name,
+//     });
+// }

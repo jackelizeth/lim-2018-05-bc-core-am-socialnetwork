@@ -1,33 +1,123 @@
 body{
-    background-image: url(/lim-2018-05-bc-core-am-socialnetwork/src/assets/verduras.jpeg);
-    font-size: 30px;
-    background-size: 100vw 100vh;
-    color: #242423;    
-    text-align: center;
-    background-attachment: fixed;
-    margin: 0;
+  background-image: url(/lim-2018-05-bc-core-am-socialnetwork/src/assets/verduras.jpeg);
+  font-size: 30px;
+  background-size: 100vw 100vh;
+  color: #242423;    
+  text-align: center;
+  background-attachment: fixed;
+  margin: 0;
+
+}
+
+form{
+  padding: 1em;
+  background: white;
+  border: 1px solid #c1c1c1;
+  margin-top: 8rem;
+  height: 400px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  -webkit-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
+  -moz-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
+  box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
+  box-sizing: border-box;
 
   }
 
-  form{
-    padding: 1em;
-    background: white;
-    border: 1px solid #c1c1c1;
-    margin-top: 8rem;
-    height: 400px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    -webkit-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
-    -moz-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
-    box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
+
+  .hiden {
+      display: none;
+    }
+    
+  .show {
+      display: block;
+  }
+
+  #btnFacebook{
+    background: #3644A2;
+    color: #ffffff;
+    border-color:#3644A2;
+    margin-bottom: 3%;
+    font-size: 25px;
+  }
+  #btnGoogle{
+    background:#E00415  ;
+    color: #ffffff;
+    border-color: #E00415;
+    font-size: 25px;
+  }
+
+  #btnLogin{
+    background:rgb(11, 157, 255)  ;
+    color: #ffffff;
+    border-color: rgb(11, 157, 255) ;
+    padding: 30px;
+    left: 50%;
+    font-size: 20px;
+  }
+
+  #btnLogin:hover {
+    cursor: pointer;
+  }
+  #btnGoogle:hover{
+    cursor: pointer;
+  }
+  #btnFacebook:hover{
+    cursor: pointer;
+  }
+
+  #email, #password {
+    margin-bottom: 8%;
+    width: 100%;
+    padding: 7px;
     box-sizing: border-box;
-
+   right: 40%;
+  } 
+  
+  @media (max-width:480px){
+    form{
+      width: 100%;
     }
+  }
 
- 
-    .hiden {
-        display: none;
+  .social{
+    background: rgb(11, 157, 255) ;
+    width: 100%;
+    height: 25%;  
+    border: 0px;
+    display: inline-block;
+    
+  }
+  #registre{
+    background: rgb(11, 157, 255) ;
+    width: 24%;
+    height: 32%;  
+    border: 0px;
+    font-size: 70%;
+    color: white;
+  }
+  @media(max-width:480px)
+  {
+    #registre{
+      width: 35%;
     }
-      
+  }
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80%;
+  }
+  
+  h3{
+    color: black;
+    font-size: 50%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+
+  .contraseña {
+    font-size: 100%;
+  }
+
