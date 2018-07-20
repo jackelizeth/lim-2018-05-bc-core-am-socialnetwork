@@ -61,8 +61,10 @@ La etapa de experiencia del usuario la hemos trabajado según las 5 fases del pr
 En esta etapa la parte más importante es la de investigar y entender a nuestros usuarios,
  para ello usamos entrevistas con usuarios.
 
- (ENTREVISTAS)
-* Hacer al menos 2 o 3 entrevistas con usuarios.
+Las preguntas que utilizamos fueron:
+
+* ¿En qué rango de
+
 
  ### SINTESIS Y DEFINICION
 
