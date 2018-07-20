@@ -1,6 +1,6 @@
 const btnLogout = document.getElementById('btnLogout');
 const btnLogin = document.getElementById('btnLogin');
-const registre = document.getElementById('registre');
+const btnRegister = document.getElementById('btnRegister');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const logout = document.getElementById('logout');
@@ -30,11 +30,21 @@ window.onload=()=>{
       });
 }
 
-registre.addEventListener('click',()=>{
+btnRegister.addEventListener('click',()=>{
+    firebase.auth().signInWithEmailAndPassword(email.value, password.value)
+    .then(function(){
+        console.log('se creo el usuario')
+    })
+    .catch(function(error) {
+        console.log(error.code, error.message)
+    });
+})
+
+btnLogin.addEventListener('click',()=>{
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
     .then(function(){
         // state.name = name.value;
-        console.log('se creo el usuario')
+        console.log('se inicio usuario')
     })
     .catch(function(error) {
         console.log(error.code, error.message)
@@ -42,16 +52,6 @@ registre.addEventListener('click',()=>{
         // var errorMessage = error.message;
     });  
 });
-
-btnLogin.addEventListener('click',()=>{
-    firebase.auth().signInWithEmailAndPassword(email.value, password.value)
-    .then(function(){
-        console.log('inicia sesion')
-    })
-    .catch(function(error) {
-        console.log(error.code, error.message)
-    });
-})
 
 btnLogout.addEventListener('click',()=>{
     firebase.auth().signOut().then(function() {
@@ -97,4 +97,3 @@ btnFacebook.addEventListener('click',()=>{
         console.log(error.credential);
       });
 })
-    
