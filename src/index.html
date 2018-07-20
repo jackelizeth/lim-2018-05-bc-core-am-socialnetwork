@@ -1,66 +1,109 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Firebase</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
+
     <link rel="stylesheet" href="css/style.css">
   
 </head>
+
 <body>
-
-         <!-- iniciar sesion -->
-        <div id= "login"class= "hiden" >
+    <!-- formulario jacky -->
+    <div>
+        <div id="login" class="hiden">
             <p id="userName"></p>
-            <input type="button" id= "btnLogout" value="log out">
+            <input type="button" id="btnLogout" value="logout">
         </div>
 
-        <!-- si ya esta loguado -->
-        <div id= "logout">
-        <form>
-            <label>ACCEDE <br>con tus datos de usuario o utilizando tus redes sociales</label><br><hr>
-            <label for="email">Email:</label>
-            <input type="email" id="email"><br>
+        <div id="logout">
 
-            <label for="password">Password:</label>
-            <input type="password" id="password"><br>
-            
-            <input type="button" id= "btnRegister" value= "register">
-            <input type="button" id= "btnLogin" value= "log in"><br>
-            <input type="button" id= "btnGoogle" value= "google"><br>
-            <input type="button" id= "btnFacebook" value= "facebook"><br>
-        </form>
-        </div>
+            <form>
+                <div class="social">
+                    <input type="button" id="btnGoogle" value="google">
+                    <input type="button" id="btnFacebook" value="facebook">
+                </div>
+                <hr>
+                <!-- <label>ACCEDE
+                    <br>con tus datos de usuario o utilizando tus redes sociales</label> -->
 
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Email">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Contraseña">
+                <input type="button" id="btnLogin" value="Iniciar Sesión">
 
-        <!-- base de datos -->
-        <!-- <div id= "baseDatos" class= "hiden">
-                <textarea name="publicacion" id="texAreaPost" cols="30" rows="10"></textarea>
-                <input type="button" id= "btnSave" value= "publicar" >
+            </form>
+
+            <div>
+                <h3 class="contraseña" ><a href=""> ¿olvidaste tu ontraseña? </a></h3>
             </div>
+            
+            <div>
+                <h3 class="cuenta" >¿No tienes una cuenta? </h3>
+            </div>
+            <div>
+                <input type="button" id="registre" value="Crear cuenta">
+            </div>
+        </div>
+    </div>
 
-        <div id= "miPosts" class= "hiden">
-            <h3>post</h3>
-        </div> -->
+    <!-- formulario kelly -->
+    <!-- <div class="container"> >
+        login
+        <div id="login" class="hiden">
+            <p id="userName"></p>
+            <input type="button" id="btnLogout" value="logout">
+        </div>
+        conectarse
+        <div>
 
-
-        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-        <script>
-        //   Initialize Firebase
-          var config = {
+        </div>
+        <div>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" >
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="password" >
+                </div>
+                <input type="button" class="btn btn-primary" id="registre" value="register">
+                <input type="button" class="btn btn-primary" id="btnLogin" value="log in "> 
+                <input type="button" class="btn btn-primary" id="btnGoogle" value="google">
+                <input type="button" class="btn btn-primary" id="btnFacebook" value="facebook">
+               
+            </form>
+        </div>
+        <div>
+            <p>¿Olvidaste tu contraseña?</p>
+        </div>
+        <div>
+            <p>¿No tienes cuenta?</p>
+        </div>
+        <div>
+            <p>Crear cuenta</p>
+        </div>
+    </div> -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
             apiKey: "AIzaSyB4rjmVcADjmFdkQARSOq9pkzk14fPp6DY",
             authDomain: "farebase-login.firebaseapp.com",
             databaseURL: "https://farebase-login.firebaseio.com",
             projectId: "farebase-login",
             storageBucket: "farebase-login.appspot.com",
             messagingSenderId: "1094149075541"
-          };
-          firebase.initializeApp(config);
-        </script>
-
+        };
+        firebase.initializeApp(config);
+    </script>
     <script src="app.js"></script>
-  
+
 </body>
+
 </html>
