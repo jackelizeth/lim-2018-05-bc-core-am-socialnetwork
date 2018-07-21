@@ -39,7 +39,7 @@ window.onload=()=>{
       });
 }
 
-registre.addEventListener('click',()=>{
+btnLogin.addEventListener('click',()=>{
     firebase.auth().signInWithEmailAndPassword(email.value, password.value)
     .then(function(){
         console.log('se creo el usuario')
@@ -49,7 +49,7 @@ registre.addEventListener('click',()=>{
     });
 })
 
-btnLogin.addEventListener('click',()=>{
+registre.addEventListener('click',()=>{
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
     .then(function(){
         // state.name = name.value;
@@ -82,7 +82,7 @@ btnGoogle.addEventListener('click',()=>{
     firebase.auth().signInWithPopup(provider)
     .then(function(result) {
         console.log('sesion con Google');
-        let user = result.user;
+        // let user = result.user;
         // writeUserData(user.uid, user.displayName,user.email, user.photoURL)
     })
     .catch(function(error) {
