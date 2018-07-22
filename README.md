@@ -135,12 +135,19 @@ En esta etapa elaboramos un prototipo que nos permita probar nuestras ideas con 
 Luego de completar el proceso de diseño de experiencia del usuario, logramos responder a los requerimientos del proyecto planteados por Laboratoria.
 
 * Cuáles son los elementos básicos que tiene una red social.
+
 * Quiénes son los principales usuarios de producto.
+
 * Cómo descubriste las necesidades de los usuarios.
+
 * Qué problema resuelve el producto para estos usuarios.
+
 * Cuáles son los objetivos de estos usuarios en relación con el producto.
+
 * Cuáles son las principales funcionalidades del producto y cuál es su prioridad.
+
 * Cómo verificaste que el producto les está resolviendo sus problemas.
+
 * Cómo te asegurarás que estos usuarios usen este producto.
 
 ***
