@@ -1,6 +1,6 @@
 const btnLogout = document.getElementById('btnLogout');
 const btnLogin = document.getElementById('btnLogin');
-const registre = document.getElementById('registre');
+const btnRegistre = document.getElementById('btnRegistre');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const logout = document.getElementById('logout');
@@ -49,7 +49,7 @@ btnLogin.addEventListener('click',()=>{
     });
 })
 
-registre.addEventListener('click',()=>{
+btnRegistre.addEventListener('click',()=>{
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
     .then(function(){
         // state.name = name.value;

@@ -4,16 +4,17 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Firebase</title>
+    <title>SocialNe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/style.css">
-  
+
 </head>
 
 <body>
+
     <!-- formulario jacky -->
-    <div>
+    <div class="fondo">
 
         <div id="login" class="hiden">
             <p id="userName"></p>
@@ -22,77 +23,47 @@
 
         <div id="logout">
 
-            <form>
-                <div class="social">
-                    <input type="button" id="btnGoogle" value="google">
-                    <input type="button" id="btnFacebook" value="facebook">
-                </div>
-                <hr>
+            <form class:"form-logueando">
+                <h2>login</h2>
                 <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Email">
+                <input type="email" id="email" class="input-100" placeholder="Email" required>
                 <label for="password">Password:</label>
-                <input type="password" id="password" placeholder="Contraseña">
+                <input type="password" id="password" class="input-100" placeholder="Contraseña" required>
+
                 <input type="button" id="btnLogin" value="Iniciar Sesión">
+                <input type="button" id="btnGoogle" value="google">
+                <input type="button" id="btnFacebook" value="facebook" >
             </form>
 
-            <div>
-                <h3 class="contraseña" ><a href=""> ¿olvidaste tu ontraseña? </a></h3>
-            </div>
-                
-            <div>
-                <h3 class="cuenta" >¿No tienes una cuenta? </h3>
-            </div>
 
-            <div>
-                <input type="button" id="registre" value="Crear cuenta">
-            </div>
+            <form>
 
+                <h2>Crear una cuenta</h2>
+
+                <div>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="input-49" required>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="input-49" required>
+                    <!-- <input type="text" name="usuario" id="" placeholder="Usuario" class="input-49" required> -->
+                    <input type="email" name="correo" id="email" placeholder="Correo" class="input-100" required>
+                    <input type="password" name="contraseña" id="password" placeholder="Contraseña" class="input-100" required>
+                    <input type="date" name="date" id="date" placeholder="Date" class="input-100" required>
+                    <input type="button" id="btnRegistre" value="Crear cuenta" required>
+
+                    <p class="form-link">¿Crea tu cuenta de usuario? <!--<a href="#">ingresa aquí</a>--> </p>
+                </div>
+
+            </form>            
+           
         </div>
 
     </div>
 
-    <!-- formulario kelly -->
-    <!-- <div class="container"> >
-        login
-        <div id="login" class="hiden">
-            <p id="userName"></p>
-            <input type="button" id="btnLogout" value="logout">
-        </div>
-        conectarse
-        <div>
 
-        </div>
-        <div>
-            <form>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" >
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="password" >
-                </div>
-                <input type="button" class="btn btn-primary" id="registre" value="register">
-                <input type="button" class="btn btn-primary" id="btnLogin" value="log in "> 
-                <input type="button" class="btn btn-primary" id="btnGoogle" value="google">
-                <input type="button" class="btn btn-primary" id="btnFacebook" value="facebook">
-               
-            </form>
-        </div>
-        <div>
-            <p>¿Olvidaste tu contraseña?</p>
-        </div>
-        <div>
-            <p>¿No tienes cuenta?</p>
-        </div>
-        <div>
-            <p>Crear cuenta</p>
-        </div>
-    </div> -->
-    
+
+    <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script>
-        // Initialize Firebase
+        /* Initialize Firebase */
         var config = {
             apiKey: "AIzaSyB4rjmVcADjmFdkQARSOq9pkzk14fPp6DY",
             authDomain: "farebase-login.firebaseapp.com",
@@ -103,7 +74,9 @@
         };
         firebase.initializeApp(config);
     </script>
-    <script src="app.js"></script>
+
+
+     <script src="app.js"></script>
 
 </body>
 
