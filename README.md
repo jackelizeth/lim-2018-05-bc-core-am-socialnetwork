@@ -45,7 +45,7 @@ Con respecto a nuestra investigación, realizamos entrevistas a nuestros posible
 
 **Deportista de natación**
 
-![entrevista2.jpg](src/assets/readme/entrevista2.jpg)
+![entrevista1.jpg](src/assets/readme/entrevista1.jpg)
 
 **Deportista de aeróbicos**
 
@@ -53,7 +53,7 @@ Con respecto a nuestra investigación, realizamos entrevistas a nuestros posible
 
 **Deportista de baile**
 
-![entrevista1.jpg](src/assets/readme/entrevista1.jpg)
+![entrevista2.jpg](src/assets/readme/entrevista2.jpg)
 
 #### **2.2 SINTESIS Y DEFINICION**
 ![ux_definición.png](src/assets/readme/ux_definición.png)
@@ -73,7 +73,7 @@ En esta fase buscamos las mejores maneras para ejecutar/desarrollar las funciona
 
 Es una web de nutrición adaptada a un público general que tiene como contenido notas e informes acerca de la alimentación para adelgazar, remedios naturales, recetas de cocina saudable, consejos y trucos, todo en ayuda de un estilo de vida saludable.
 
-![nootric.png](src/assets/readme/come_con_salud.png)
+![come_con_salud.png](src/assets/readme/come_con_salud.png)
 
 **Nootric**
 
@@ -91,7 +91,7 @@ Es una red social de ensaladas que tiene blogs, trucos y consejos, pero sobre to
 
 Es una red social para atletas, donde puedes unirte a clubs de tu deporte preferido, añadir actividades, llevar un registro de entrenamiento y grabar tus actividades.
 
-![stravia.png](src/assets/readme/stravia.png)
+![strava.png](src/assets/readme/strava.png)
 
 Los comentarios de la applicación demuestran molestias por su costoso sistema y sus continuos mensajes de error al sicronizar sus actividades.
 
