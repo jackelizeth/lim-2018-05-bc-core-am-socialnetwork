@@ -113,7 +113,7 @@ form #btnFacebook:active{
 }
 
 /* botones */
-form #btnRegistre{
+form #btnRegister{
   width: 100%;
   padding: 10px 40px;/* relleno */
   background: rgb(255, 0, 51);
@@ -123,7 +123,7 @@ form #btnRegistre{
   cursor: pointer;
 }
 
-form #btnRegistre:active{
+form #btnRegister:active{
   transform: scale(1.05)
 }
 
@@ -132,7 +132,8 @@ form #btnRegistre:active{
   font-size: 14;
 }
 
-.hiden {
+/* oculta */
+.ocultar {
   display: none;
   }
    

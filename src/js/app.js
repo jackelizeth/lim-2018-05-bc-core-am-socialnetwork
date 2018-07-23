@@ -1,44 +1,60 @@
-const btnLogout = document.getElementById('btnLogout');
 const btnLogin = document.getElementById('btnLogin');
-const btnRegistre = document.getElementById('btnRegistre');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const logout = document.getElementById('logout');
 const btnGoogle = document.getElementById('btnGoogle');
 const btnFacebook = document.getElementById('btnFacebook');
+
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+
+const btnRegister = document.getElementById('btnRegister');
+
+// const btnLogout = document.getElementById('btnLogout');
+
+const email_create = document.getElementById('email_create');
+const password_create = document.getElementById('password_create');
+
+
+// const login = document.getElementById('login');
+// const muro = document.getElementById('muro');
+
 // const baseDatos = document.getElementById('baseDatos');
 // const btnSave = document.getElementById('btnSave');
 // const texAreaPost = document.getElementById('texAreaPost');
 // const miPosts = document.getElementById('miPosts');
 
+
 const state = {
     name: null,
 };
 
- /* crear email y password */
+ /* valida si hay session activa o abierto*/
 window.onload=()=>{
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-             /* si el usuario esta logiado */
+             /* si el usuario esta logueado / activo / sesion abierta*/
             console.log('inicio logueado');
 
-            login.classList.remove("hiden");
-            logout.classList.add("hiden");
+            //muro.classList.remove("ocultar");elimina clase hiden // mostrando el muro
+            //login.classList.add("ocultar");agrega clase hiden //ocultando el login
+
             // baseDatos.classList.remove("hiden");
             // miPosts.classList.remove("hiden");
             console.log(user);
-            userName.innerHTML = `Bienvenida ${user.displayName}`;
+             // assign = asignar
+            window.location.assign("muro.html");
+            // userName.innerHTML = `Bienvenida ${user.displayName}`;
             // userName.innerHTML = `Bienvenida ${state.name}`;
         } else {
             console.log('no esta logueado');
-            login.classList.add("hiden");
-            logout.classList.remove("hiden");
+           // muro.classList.add("ocultar");agrega la clase hiden del div id muro // ocultando el muro
+            //login.classList.remove("ocultar");elimina clase hiden al div id login // mostrando el login
             // baseDatos.classList.add("hiden");
             // miPosts.classList.add("hiden");
         }
       });
 }
 
+
+/* inicia sesion con tu correo y tu password, que fue creado en el registro */
 btnLogin.addEventListener('click',()=>{
     firebase.auth().signInWithEmailAndPassword(email.value, password.value)
     .then(function(){
@@ -49,8 +65,9 @@ btnLogin.addEventListener('click',()=>{
     });
 })
 
-btnRegistre.addEventListener('click',()=>{
-    firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
+/* creando una cuenta desde el registro nuevo */
+btnRegister.addEventListener('click',()=>{
+    firebase.auth().createUserWithEmailAndPassword(email_create.value, password_create.value)
     .then(function(){
         // state.name = name.value;
         console.log('se inicio usuario')
@@ -61,16 +78,6 @@ btnRegistre.addEventListener('click',()=>{
         // var errorMessage = error.message;
     });  
 });
-
-btnLogout.addEventListener('click',()=>{
-    firebase.auth().signOut().then(function() {
-        console.log('Cerro Sesión');
-        login.classList.remove("hiden");
-        logout.classList.add("hiden");
-      }).catch(function(error) {
-        console.log('Error al cerrar Sesión');
-      });
-})
 
 /* si te logueas con google obtienes toda la data  */
 btnGoogle.addEventListener('click',()=>{
@@ -93,6 +100,7 @@ btnGoogle.addEventListener('click',()=>{
       });
 })
 
+/*  logueada con facebook   */
 btnFacebook.addEventListener('click',()=>{
     var provider = new firebase.auth.GoogleAuthProvider();
     provider.setCustomParameters({
@@ -109,6 +117,7 @@ btnFacebook.addEventListener('click',()=>{
         console.log(error.credential);
       });
 })
+
 
 // function writeUserData(userId, name, email, imageUrl){
 //     firebase.database().ref('users/' + userId).set({
