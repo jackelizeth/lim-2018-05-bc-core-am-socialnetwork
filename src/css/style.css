@@ -1,123 +1,174 @@
-body{
-    background-image: url(/lim-2018-05-bc-core-am-socialnetwork/src/assets/css/verduras.jpeg);
-    font-size: 30px;
-    background-size: 100vw 100vh;
-    color: #242423;    
-    text-align: center;
-    background-attachment: fixed;
-    margin: 0;
+*{
+  box-sizing: border-box;/* para el responseve */
+}
 
+body{
+  font-family: sans-serif;
+  background: rgb(255, 255, 255);/* color del cuadro de fondo*/
+}
+
+/* titulo login */
+h2{
+  padding: 10px;/* relleno */
+  text-align: center; 
+  font-size: 30px;/* tamaño de fuente */
+  color: rgba(0,0,0,0.5);/* color de texto */
+  background:white;/* color del cuadro de texto */
+}
+
+/* cuador del login y crear cuenta */
+form{
+  margin: 80px ;   /* exterior entre cada cuadro */
+  margin-top:50px;/* exterior */
+  padding:30px; /* relleno */
+  max-width:500px; /* el ancho del fondo del login */
+  height:500px;
+  background:white;
+
+  border: 1px solid rgba(0,0,0,0.2); /* borde del cuadro del login */
+  border-radius: 10px;/*  borde redondiado del cuadro del login */
+  -webkit-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29); /* sombra del borde del cuadro del login */
+  -moz-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29); 
+  box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
+
+  float: left;  /* los cuadros alineados  */
+  float: right; /* los cuadros alineados */
+}
+
+/* nombres de email y password */
+form label{
+  font-weight: bold;
+  color: black;
+  
+}
+
+/* input type text,etc - botones */
+form input{
+  padding: 7px;/* relleno */
+  margin-bottom: 15px;/* exterior entre 2*/
+  font-size: 15px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  
+}
+
+/* medida de la caja del input */
+.input-100{
+  width: 100%;
+}
+
+.input-49{
+  width: 49%;
+}
+
+/* botones */
+form #btnLogin{
+  width: 100%;
+  padding: 10px 40px;/* relleno */
+  background: rgb(19, 192, 106);
+  font-size: 20px;
+  color: white;
+  border: 0;
+  /* border-radius: 20px; */
+  cursor: pointer;
+  /* opacity: 0.8; */
+}
+
+form #btnLogin:active{
+  transform: scale(1.05)
+}
+
+/* botones */
+form #btnGoogle{
+  width: 100%;
+  padding: 10px 40px;/* relleno */
+  background: rgb(255, 0, 0);
+  font-size: 20px;
+  color: white;
+  border: 0;
+  /* border-radius: 20px; */
+  cursor: pointer;
+  /* opacity: 0.8; */
+}
+
+form #btnGoogle:active{
+  transform: scale(1.05)
+}
+
+/* botones */
+form #btnFacebook{
+  width: 100%;
+  padding: 10px 40px;/* relleno */
+  background: rgb(4, 0, 255);
+  font-size: 20px;
+  color: white;
+  border: 0;
+  /* border-radius: 20px; */
+  cursor: pointer;
+  /* opacity: 0.8; */
+}
+
+form #btnFacebook:active{
+  transform: scale(1.05)
+}
+
+/* botones */
+form #btnRegister{
+  width: 100%;
+  padding: 10px 40px;/* relleno */
+  background: rgb(255, 0, 51);
+  font-size: 20px;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+form #btnRegister:active{
+  transform: scale(1.05)
+}
+
+.form-link{
+  text-align: center;
+  font-size: 14;
+}
+
+/* oculta */
+.ocultar {
+  display: none;
+  }
+   
+    /*
+  .show {
+      display: block;
   }
 
-  form{
-    padding: 1em;
-    background: white;
-    border: 1px solid #c1c1c1;
-    margin-top: 8rem;
-    height: 400px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    -webkit-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
-    -moz-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
-    box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
-    box-sizing: border-box;
 
-    }
 
- 
-    .hiden {
-        display: none;
-      }
-      
-    .show {
-        display: block;
-    }
 
-    #btnFacebook{
-      background: #3644A2;
-      color: #ffffff;
-      border-color:#3644A2;
-      margin-bottom: 3%;
-      font-size: 25px;
-    }
-    #btnGoogle{
-      background:#E00415  ;
-      color: #ffffff;
-      border-color: #E00415;
-      font-size: 25px;
-    }
+ /* botones */
+/* input[class="btnGoFaIn"]{
+  margin-bottom: 10px;/* espacio entre el login y el email 
+  border: 0;/* bordes del boton 
+  background: linear-gradient(#FFDA63, #FFB940);
+  color: brown;
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 20px;
+} */
 
-    #btnLogin{
-      background:rgb(11, 157, 255)  ;
-      color: #ffffff;
-      border-color: rgb(11, 157, 255) ;
-      padding: 30px;
-      left: 50%;
-      font-size: 20px;
-    }
+/* div .fondo{
+box-sizing: border-box;/* para el responseve 
+display: inline-block; /* los cuadros alineados 
 
-    #btnLogin:hover {
-      cursor: pointer;
-    }
-    #btnGoogle:hover{
-      cursor: pointer;
-    }
-    #btnFacebook:hover{
-      cursor: pointer;
-    }
+  margin-left: auto;
+  margin-right: auto;
 
-    #email, #password {
-      margin-bottom: 8%;
-      width: 100%;
-      padding: 7px;
-      box-sizing: border-box;
-     right: 40%;
-    } 
-    
-    @media (max-width:480px){
-      form{
-        width: 100%;
-      }
-    }
+  font-weight: 100; 
+} */
 
-    .social{
-      background: rgb(11, 157, 255) ;
-      width: 100%;
-      height: 25%;  
-      border: 0px;
-      display: inline-block;
-      
-    }
-    #registre{
-      background: rgb(11, 157, 255) ;
-      width: 24%;
-      height: 32%;  
-      border: 0px;
-      font-size: 70%;
-      color: white;
-    }
-    @media(max-width:480px)
-    {
-      #registre{
-        width: 35%;
-      }
-    }
- a {
-      text-decoration: none;
-      color: black;
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 80%;
-    }
-    
-    h3{
-      color: black;
-      font-size: 50%;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-    }
-
-    .contraseña {
-      font-size: 100%;
-    }
-
+/*.contenedor-inputs{
+   padding: 10px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
