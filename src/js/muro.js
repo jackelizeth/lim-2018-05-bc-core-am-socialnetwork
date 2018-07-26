@@ -39,5 +39,3 @@ const state = {
         console.log('Error al cerrar Sesión');
       });
 })
-
-document.write('mi perfill')
