@@ -1,12 +1,75 @@
 *{
   box-sizing: border-box;/* para el responseve */
 }
-
 body{
+  width: 100%;
   font-family: sans-serif;
-  background: rgb(255, 255, 255);/* color del cuadro de fondo*/
+  background: rgba(255, 255, 255, 0.844);/* color del cuadro de fondo*/
+  padding: 0%;
+  margin: 0%;
 }
-
+header{
+  width: 100%;
+  height: 110px;
+  /* outline: 1px solid green; */
+  padding: 0%;
+  margin: 0%;
+  background: #FFE29C;
+}
+/* Nombre de la web */
+header img{
+  padding-left: 8%;
+  padding-top: 1%;
+}
+/* Nombre de email y contraseña */
+header label{
+  font-weight: bold;
+  margin-left: 5%;
+  font-size: 20px;
+  color:rgb(155, 154, 154);
+} 
+/* Donde ingresas la contraseña y el corre */
+header .input-100{
+  width: 15%;
+  border-radius: 5px;
+  padding: 6px;
+  font-size: 17px;
+}
+#btnLogin{
+  width: 15%;
+  margin-left: 5%;
+  background:#FFB213;
+  padding: 6px;
+  font-size: 20px;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  /* opacity: 0.8; */
+}
+#btnLogin:active{
+  transform: scale(1.05)
+}
+@media screen and (max-width:1062px ){
+  header{
+      height: 90px;
+  }
+  img{
+      padding-left: 2%;
+  }
+  header label{
+      margin-left:1%;
+      font-size: 12px; 
+  }
+  header .input-100{
+      font-size: 10px;
+  }
+  #btnLogin{
+      margin-left: 0%;
+      font-size: 10px;
+      width: 15%;
+  }
+} 
 /* titulo login */
 h2{
   padding: 10px;/* relleno */
@@ -15,95 +78,85 @@ h2{
   color: rgba(0,0,0,0.5);/* color de texto */
   background:white;/* color del cuadro de texto */
 }
-
 /* cuador del login y crear cuenta */
 form{
   margin: 80px ;   /* exterior entre cada cuadro */
-  margin-top:50px;/* exterior */
+  margin-top:20px;/* exterior */
   padding:30px; /* relleno */
   max-width:500px; /* el ancho del fondo del login */
   height:500px;
   background:white;
-
   border: 1px solid rgba(0,0,0,0.2); /* borde del cuadro del login */
   border-radius: 10px;/*  borde redondiado del cuadro del login */
   -webkit-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29); /* sombra del borde del cuadro del login */
   -moz-box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29); 
   box-shadow: -9px 9px 10px 0px rgba(0,0,0,0.29);
-
   float: left;  /* los cuadros alineados  */
   float: right; /* los cuadros alineados */
 }
-
-/* nombres de email y password */
-form label{
-  font-weight: bold;
-  color: black;
-  
-}
-
 /* input type text,etc - botones */
 form input{
   padding: 7px;/* relleno */
   margin-bottom: 15px;/* exterior entre 2*/
   font-size: 15px;
   border: 1px solid gray;
-  border-radius: 3px;
-  
+  border-radius: 5px;    
 }
-
 /* medida de la caja del input */
 .input-100{
-  width: 100%;
+  width: 94%;
 }
-
 .input-49{
-  width: 49%;
+  width: 47%;
 }
-
-/* botones */
-form #btnLogin{
+/* boton de registro*/
+form #btnRegister{
   width: 100%;
   padding: 10px 40px;/* relleno */
-  background: rgb(19, 192, 106);
+  margin-top: 10%;
+  background: #FFAB00;
   font-size: 20px;
   color: white;
   border: 0;
-  /* border-radius: 20px; */
   cursor: pointer;
-  /* opacity: 0.8; */
+  border-radius: 10px;
 }
 
-form #btnLogin:active{
+form #btnRegister:active{
   transform: scale(1.05)
-}
+}  
 
-/* botones */
+form p{
+  margin-top: 20%;
+  text-align: center;
+}
+/* boton de google */
 form #btnGoogle{
-  width: 100%;
+  width: 40%;  
   padding: 10px 40px;/* relleno */
-  background: rgb(255, 0, 0);
-  font-size: 20px;
+  margin-left: 30%;
+  background:#c71610;
+  font-size: 15px;
   color: white;
   border: 0;
-  /* border-radius: 20px; */
+  border-radius: 8px;
   cursor: pointer;
   /* opacity: 0.8; */
 }
-
 form #btnGoogle:active{
   transform: scale(1.05)
 }
-
-/* botones */
+/* boton de facebook */
 form #btnFacebook{
-  width: 100%;
+  width: 40%;
+  margin-left: 30%;
   padding: 10px 40px;/* relleno */
-  background: rgb(4, 0, 255);
-  font-size: 20px;
+  margin-top: 2%;
+  background: #3b5998;
+  font-size: 15px;
   color: white;
   border: 0;
-  /* border-radius: 20px; */
+  border-radius: 8px;
   cursor: pointer;
   /* opacity: 0.8; */
 }
@@ -112,63 +165,66 @@ form #btnFacebook:active{
   transform: scale(1.05)
 }
 
-/* botones */
-form #btnRegister{
-  width: 100%;
-  padding: 10px 40px;/* relleno */
-  background: rgb(255, 0, 51);
-  font-size: 20px;
+
+@media screen and (max-width:1662px ){
+.form{
+    position: absolute;
+    padding-left: 25%;
+    padding-top: 5%;
+  }
+}
+@media screen and (max-width:1062px ){
+  .form{
+    position: absolute;
+    padding-left: 15%;;
+    padding-top: 5%;
+  }
+}
+.background-image{
+  float: left;
+  background-image: url(/src/assets/css/fondo.jpg)  ;
+  width:60%;
+  height: 680px;
+  background-size: cover; /* la imagen se expande en todo el contenedor */
+ /* para las letras */
+  display: flex; 
+  flex-direction: column; /* para volverlo columna */
+  justify-content: center;/* texto en el centro de arriba hacia abajo*/
+  align-items: center;/* texto en el centro de derecha hacia izquierda*/
+}
+/* Para el color encima de la imagen */
+.background-image:before{
+  content: ""; /*contenido vacio*/
+  width: 60%;
+  height: 680px;
+  background-color: #FFD46B;
+  position: absolute;
+  opacity: 0.2;
+}
+.background-image p{
+  z-index: 1;
   color: white;
-  border: 0;
-  cursor: pointer;
-}
-
-form #btnRegister:active{
-  transform: scale(1.05)
-}
-
-.form-link{
+  font-size: 200%;
   text-align: center;
-  font-size: 14;
 }
-
-/* oculta */
-.ocultar {
-  display: none;
+span{
+  font-weight: 600;
+  font-size: 200%;
+}
+@media(max-width:1662px){
+  .background-image{
+    width: 100%;
+    justify-content: initial;
+    height: 850px;
   }
-   
-    /*
-  .show {
-      display: block;
+  .background-image:before{
+    width: 100%;
+    height: 850px;
   }
-
-
-
-
- /* botones */
-/* input[class="btnGoFaIn"]{
-  margin-bottom: 10px;/* espacio entre el login y el email 
-  border: 0;/* bordes del boton 
-  background: linear-gradient(#FFDA63, #FFB940);
-  color: brown;
-  opacity: 0.8;
-  cursor: pointer;
-  border-radius: 20px;
-} */
-
-/* div .fondo{
-box-sizing: border-box;/* para el responseve 
-display: inline-block; /* los cuadros alineados 
-
-  margin-left: auto;
-  margin-right: auto;
-
-  font-weight: 100; 
-} */
-
-/*.contenedor-inputs{
-   padding: 10px 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-} */
+  .background-image p{
+    font-size: 100%;
+  }
+  span{
+    font-size: 200%;
+  }
+}

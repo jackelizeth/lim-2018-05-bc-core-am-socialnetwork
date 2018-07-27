@@ -4,68 +4,101 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SocialNe</title>
+    <title>SocialNetwork</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
 
-
     <div class="contenedor">
-<!-- iniciar sesion -->
+        <header>
+            <!-- creando cuenta -->
+
+            <div>
+                <img src="assets/css/logo.jpg" alt="">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="input-100" placeholder="Ingrese su email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="input-100" placeholder="Ingrese su contraseña" required>
+
+                <button type="button" id="btnLogin" value="Iniciar Sesión">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                    Inicia sesión
+                </button>
+
+            </div>
+        </header>
+        <!-- iniciar sesion -->
+        <div class="background-image">
+            <p>La rapidez de una
+                <span>sana alimentación</span>
+                <br> a tu alcance</p>
+        </div>
+        <div class="form">
             <form>
                 <div>
-                <h2>login</h2>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" class="input-100" placeholder="Email" required>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" class="input-100" placeholder="Contraseña" required>
+                    <h2>Únete a esta aventura</h2>
+                </div>
+                <hr>
+                <div>
+                    <!-- icono de  usuario -->
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="input-49" required>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="input-49" required>
+                    <!-- icono de correo -->
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <input type="email" name="correo" id="email_create" placeholder="Correo" class="input-100" required>
+                    <!-- icono de contraseña -->
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type="password" name="contraseña" id="password_create" placeholder="Contraseña" class="input-100" required>
+                    <!-- icono de cumpleaños -->
+                    <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                    <input type="date" name="date" id="date" placeholder="Date" class="input-100" required>
 
-                    <input type="button" id="btnLogin" value="Iniciar Sesión">
-                    <input type="button" id="btnGoogle" value="google">
-                    <input type="button" id="btnFacebook" value="facebook" >
+                    <button type="button" id="btnRegister" value="registrarte">
+                        <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                        Registrate
+                    </button>
+
+
+                </div>
+                <div>
+                    <p>También puedes conectarte con</p>
+                    <button type="button" id="btnGoogle" value="google">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                         Gmail
+                    </button>
+                    <button type="button" id="btnFacebook" value="facebook">
+                        <i class="fa fa-facebook-official" aria-hidden="true"> </i>
+                         Facebook
+                    </button>
                 </div>
             </form>
 
-<!-- creando cuenta -->
-            <form>
-                <h2>Crear una cuenta</h2>
-                <div>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="input-49" required>
-                    <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="input-49" required>
-                    <!-- <input type="text" name="usuario" id="" placeholder="Usuario" class="input-49" required> -->
-                    <input type="email" name="correo" id="email_create" placeholder="Correo" class="input-100" required>
-                    <input type="password" name="contraseña" id="password_create" placeholder="Contraseña" class="input-100" required>
-                    <input type="date" name="date" id="date" placeholder="Date" class="input-100" required>
-
-                    <input type="button" id="btnRegister" value="registrarte" required>
-
-                    <p class="form-link">Al hacer clic en "Registrarte", aceptas nuestras Condiciones. <!--<a href="#">ingresa aquí</a>--> </p>
-                </div>
-            </form>            
-    </div>
-    
-    
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-    <script>
-        /* Initialize Firebase */
-        var config = {
-            apiKey: "AIzaSyB4rjmVcADjmFdkQARSOq9pkzk14fPp6DY",
-            authDomain: "farebase-login.firebaseapp.com",
-            databaseURL: "https://farebase-login.firebaseio.com",
-            projectId: "farebase-login",
-            storageBucket: "farebase-login.appspot.com",
-            messagingSenderId: "1094149075541"
-        };
-        firebase.initializeApp(config);
-    </script>
+        </div>
 
 
-     <script src="js/app.js"></script>
+
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+        <script>
+            /* Initialize Firebase */
+            var config = {
+                apiKey: "AIzaSyB4rjmVcADjmFdkQARSOq9pkzk14fPp6DY",
+                authDomain: "farebase-login.firebaseapp.com",
+                databaseURL: "https://farebase-login.firebaseio.com",
+                projectId: "farebase-login",
+                storageBucket: "farebase-login.appspot.com",
+                messagingSenderId: "1094149075541"
+            };
+            firebase.initializeApp(config);
+        </script>
+
+
+        <script src="js/app.js"></script>
 
 </body>
 
