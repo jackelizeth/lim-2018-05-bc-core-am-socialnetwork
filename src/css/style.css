@@ -132,9 +132,9 @@ form p{
 }
 /* boton de google */
 form #btnGoogle{
-  width: 40%;  
+  width: 70%;  
   padding: 10px 40px;/* relleno */
-  margin-left: 30%;
+  margin-left: 13%;
   background:#c71610;
   font-size: 15px;
   color: white;
@@ -148,8 +148,8 @@ form #btnGoogle:active{
 }
 /* boton de facebook */
 form #btnFacebook{
-  width: 40%;
-  margin-left: 30%;
+  width: 70%;
+  margin-left: 13%;
   padding: 10px 40px;/* relleno */
   margin-top: 2%;
   background: #3b5998;

@@ -11,8 +11,9 @@ const btnRegister = document.getElementById('btnRegister');
 
 const email_create = document.getElementById('email_create');
 const password_create = document.getElementById('password_create');
-
-
+const apellido = document.getElementById('apellido');
+const date = document.getElementById('date');
+const userName = document.getElementById('userName');
 // const login = document.getElementById('login');
 // const muro = document.getElementById('muro');
 
@@ -65,12 +66,23 @@ btnLogin.addEventListener('click',()=>{
     });
 })
 
+// Guardando datos en la referencia users para mostrar en la base de datos de firebase
+function writeUserData(userId, name, email, imageUrl){
+    firebase.database().ref('users/' + userId).set({
+        name: name,
+        email: email,
+        picture: imageUrl,
+    });
+}
+
 /* creando una cuenta desde el registro nuevo */
 btnRegister.addEventListener('click',()=>{
     firebase.auth().createUserWithEmailAndPassword(email_create.value, password_create.value)
-    .then(function(){
+    .then(function(result){
         // state.name = name.value;
         console.log('se inicio usuario')
+       const user= result.user;
+        writeUserData(user.uid, user.displayName,user.email, user.photoURL);
     })
     .catch(function(error) {
         console.log(error.code, error.message)
@@ -81,7 +93,7 @@ btnRegister.addEventListener('click',()=>{
 
 /* si te logueas con google obtienes toda la data  */
 btnGoogle.addEventListener('click',()=>{
-    var provider = new firebase.auth.GoogleAuthProvider();
+    const provider = new firebase.auth.GoogleAuthProvider();
     provider.setCustomParameters({
         'display': 'popup'
     });
@@ -89,8 +101,9 @@ btnGoogle.addEventListener('click',()=>{
     firebase.auth().signInWithPopup(provider)
     .then(function(result) {
         console.log('sesion con Google');
-        // let user = result.user;
-        // writeUserData(user.uid, user.displayName,user.email, user.photoURL)
+
+        const user = result.user;
+        writeUserData(user.uid, user.displayName,user.email, user.photoURL);
     })
     .catch(function(error) {
         console.log(error.code);
@@ -109,7 +122,10 @@ btnFacebook.addEventListener('click',()=>{
 
     firebase.auth().signInWithPopup(provider)
     .then(function(result) {
-        console.log('sesion con Facebook');})
+        console.log('sesion con Facebook');
+        const user= result.user;
+        // writeUserData(user.uid, user.displayName,user.email, user.photoURL);
+    })
     .catch(function(error) {
         console.log(error.code);
         console.log(error.message);
@@ -118,12 +134,3 @@ btnFacebook.addEventListener('click',()=>{
       });
 })
 
-
-// function writeUserData(userId, name, email, imageUrl){
-//     firebase.database().ref('users/' + userId).set({
-//         username: name,
-//         email: email,
-//         prolife_picture: imageUrl,
-//         github:  name,
-//     });
-// }
