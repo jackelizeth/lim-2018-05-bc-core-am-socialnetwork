@@ -228,3 +228,8 @@ span{
     font-size: 200%;
   }
 }
+
+/* CODIGO PARA EL MURO */
+.hiden{
+  display: none;
+}

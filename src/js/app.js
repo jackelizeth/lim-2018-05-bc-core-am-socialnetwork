@@ -17,11 +17,6 @@ const userName = document.getElementById('userName');
 // const login = document.getElementById('login');
 // const muro = document.getElementById('muro');
 
-// const baseDatos = document.getElementById('baseDatos');
-// const btnSave = document.getElementById('btnSave');
-// const texAreaPost = document.getElementById('texAreaPost');
-// const miPosts = document.getElementById('miPosts');
-
 
 const state = {
     name: null,
