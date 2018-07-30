@@ -1,0 +1,55 @@
+@import url(menu.css);
+@import url(banner.css);
+@import url(blog.css);
+
+@font-face{/*tipo de fuente*/
+    font-family: raleway;
+    src: url(fuentes/Raleway-Regular.ttf)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;/*le forzamos que mantenga el alto */
+}
+
+body{
+    font-family: raleway;/*fuente del texto*/
+}
+
+header{
+    width: 100%;/*ancho*/
+    height: 50px;/*alto*/
+    background: rgb(255, 0, 0);
+    color: #fff;/*color del texto*/
+
+    position: fixed;/*banner quede pegado*/
+    top: 0;
+    left: 0;
+    z-index:100;/*banner quede delate de todos los demas*/
+}
+
+.contenedor{ /*del header el div su class*/
+    width: 98%;/*ayuda para que sea response*/
+    margin: auto;/*parte externa ayude a que este centrado al html*/
+}
+
+h1{
+    float: left;/*el texto ALISON flota dentro del header al la izq */
+}
+
+header .contenedor{/*el container se expande*/
+    display: table;/*para limpiar lo float de h1 y header label*/
+}
+
+section{
+    width: 100%;
+    margin-bottom: 25px;/*espacio fuera del borde del cajon */
+}
+
+#bienvenidos{
+    text-align: center;
+}
+
+
+

@@ -1,0 +1,77 @@
+#menu-bar{/* input checkbox*/
+    display: none;/*esconde*/
+}
+
+header{
+    width: 100%;/*ancho*/
+    height: 70px;/*alto*/
+    /* background: rgb(216, 19, 210); */
+}
+
+.ancho{
+    width: 100%;
+    height: 70px;
+    /* background:rgb(84, 66, 240); */
+    margin: auto;
+}
+
+/*cajon de alisano*/
+.logo{
+    width: 30%;
+    height: 70px;
+    background: rgb(0, 174, 255);
+    float: left;/*izquierda*/
+    padding-top: 10px;
+    box-sizing: border-box;/*le forzamos que mantenga el alto */
+    font-weight: bold;
+    font-family: raleway;/*tipo de fuente*/
+}
+
+/*nombre alisano*/
+.logo p a{
+    color: rgb(9, 14, 165);
+    font-size: 40px;
+    text-decoration: none;/*que no tenga ninguna decoracion(linea debajo la letra)*/
+    padding: 150px;
+}
+
+
+/*cajon de loguin */
+.contenedor-btnLogout{
+    width: 70%;
+    height: 70px;
+    background: rgb(0, 174, 255);
+    float: left;
+    padding-top: 5px;/*texto se coloca al medio*/
+    box-sizing: border-box;
+}
+
+/*texto de inicio */
+div input{
+    /* color: rgb(230, 26, 26); */
+    font-size: 15px;
+    font-family: raleway; /* tipo de fuente*/
+    margin: 700px;
+}
+
+/*tipo de fuente*/
+@font-face{
+    font-family: raleway;
+    src: url(fuentes/Raleway-Regular.ttf)
+}
+
+/* solo el boton logout*/
+.btnLogout{
+    display: block;
+    width: 100px;
+    color: rgb(0, 0, 0);
+    padding: 7px;
+    margin-top: 10px;
+    border: 3px solid rgb(255, 255, 255);
+    font-size: 20px;
+    background:  rgb(255, 254, 255);
+}
+
+.btnLogout:hover{/* cuando pasa el mause se muestra un color blanco trasparente */
+    background:  rgb(0, 174, 255);
+}

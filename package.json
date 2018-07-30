@@ -1,0 +1,33 @@
+{
+  "name": "lim-2018-05-bc-core-am-socialnetwork",
+  "version": "1.0.0",
+  "description": "red-social",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackelizeth/lim-2018-05-bc-core-am-socialnetwork.git"
+  },
+  "author": "jackeline",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackelizeth/lim-2018-05-bc-core-am-socialnetwork/issues"
+  },
+  "homepage": "https://github.com/jackelizeth/lim-2018-05-bc-core-am-socialnetwork#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "htmlhint": "^0.9.13",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.1",
+    "opener": "^1.4.3",
+    "firebase-mock": "^2.2.4",
+    "install": "^0.12.1",
+    "npm": "^6.2.0"
+  }
+}

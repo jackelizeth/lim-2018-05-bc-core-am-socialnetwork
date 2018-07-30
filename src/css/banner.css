@@ -1,0 +1,26 @@
+#banner{
+    margin-top: 50px;/*para que empiece debajo del menu*/
+    position: relative;
+}
+
+#banner img{/*tamaño de la imagen del banner*/
+    width: 100%;
+    height:100%;
+}
+
+#banner .contenedor{/*div afecta al h2,p,a*/
+    position: absolute;/*el texto se posiciona en base al banner de la posicion relativa*/
+    top:70%;/*el texto se ubica a la mitad del banner*/
+    left:50%;
+    transform: translateX(-50%); /*translateY(-50%); para que el texto siempre este en el medio*/
+    color: white/*texto blanco*/
+}
+
+#banner h2{
+    font-size: 40px;/*TAMAÑO DEL TEXTO*/
+    -webkit-text-stroke-color:white;/*color del contorno del texto*/
+    -webkit-text-stroke-width: 0.75px; /*tamaño del contorno del texto*/
+}
+
+
+

@@ -229,7 +229,36 @@ span{
   }
 }
 
-/* CODIGO PARA EL MURO */
-.hiden{
-  display: none;
-}
+
+
+
+ /* botones */
+/* input[class="btnGoFaIn"]{
+  margin-bottom: 10px;/* espacio entre el login y el email 
+  border: 0;/* bordes del boton 
+  background: linear-gradient(#FFDA63, #FFB940);
+  color: brown;
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 20px;
+} */
+
+/* div .fondo{
+box-sizing: border-box;/* para el responseve 
+display: inline-block; /* los cuadros alineados 
+
+  margin-left: auto;
+  margin-right: auto;
+
+  font-weight: 100; 
+} */
+
+/*.contenedor-inputs{
+   padding: 10px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+
+
+
