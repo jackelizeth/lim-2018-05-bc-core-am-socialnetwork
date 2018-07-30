@@ -1,9 +1,9 @@
 const btnLogout = document.getElementById('btnLogout');
 
-const baseDatos = document.getElementById('base-de-datos');
-const btnToPost = document.getElementById('btnToPost');
-const textAreaPost = document.getElementById('textAreaPost');
-const miPost = document.getElementById('miPost');
+// const baseDatos = document.getElementById('base-de-datos');
+// const btnToPost = document.getElementById('btnToPost');
+// const textAreaPost = document.getElementById('textAreaPost');
+// const miPost = document.getElementById('miPost');
 
 const state = {
     name: null,

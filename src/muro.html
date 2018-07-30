@@ -6,18 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
 
 </head>
 
 <body>
-    <div class="container">
 
-        <div>
-            <input type="button" id="btnLogout" value="Cerrar sesión">
-            <p id="userName"></p>
-        </div>
+    <!-- banner alisano de style.css -->
+    <div class="container">
+    <header>
+            <div class= "ancho">
+                <div class= "logo">
+                    <p><a href="muro.html">AliSano</a></p>
+    
+            </div>
+                <div class="contenedor-btnLogout">
+                    <p id="userName"></p>
+                    <input type="button" id="btnLogout" value="cerrar sesion" class= "btnLogout">
+                </div>
+            </div>
+    
+    </header>
+ 
+    
+    <!--banner.css-->
+        <main>
+            <section id= "banner">
+                <img src="img/b-1.jpg">
+                <div class= "contenedor">
+                    <h2>Vida Saludable</h2>
+                    <!-- <P>¿Que es lo mejor para ti?</P> -->
+                    <!-- <a href="#">Lee mas</a> -->
+                </div>
+            </section>
+        </main>
+    
+        <section id= "bienvenidos">
+            <h2>BIENVENIDOS A VIVIENDO SANO</h2>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque hic sequi facilis maiores necessitatibus vero quam quod cum, sunt alias at aspernatur molestias aliquam iusto minima ratione blanditiis architecto fugit.</P>
+        </section>
+
         <div id="base-de-datos" class="hidden">
             <textarea name="Publicacion" id="textAreaPost" value="Escriba su publicación" cols="30" rows="10"></textarea>
             <input type="button" value="Pubicar" id="btnToPost">
@@ -27,23 +56,22 @@
             <h3>Post</h3>
         </div>
 
-    </div>
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-    <script>
-        /* Initialize Firebase */
-        var config = {
-            apiKey: "AIzaSyB4rjmVcADjmFdkQARSOq9pkzk14fPp6DY",
-            authDomain: "farebase-login.firebaseapp.com",
-            databaseURL: "https://farebase-login.firebaseio.com",
-            projectId: "farebase-login",
-            storageBucket: "farebase-login.appspot.com",
-            messagingSenderId: "1094149075541"
-        };
+    </div> 
 
-        firebase.initializeApp(config);
-    </script>
-    <script src="js/muro.js"></script>
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+        <script>
+            /* Initialize Firebase */
+            var config = {
+                apiKey: "AIzaSyB4rjmVcADjmFdkQARSOq9pkzk14fPp6DY",
+                authDomain: "farebase-login.firebaseapp.com",
+                databaseURL: "https://farebase-login.firebaseio.com",
+                projectId: "farebase-login",
+                storageBucket: "farebase-login.appspot.com",
+                messagingSenderId: "1094149075541"
+            };
+            firebase.initializeApp(config);
+        </script>
 
 </body>
 
